@@ -6,103 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel = "stylesheet" href = "phones.css">
 </head>
 
-<style>
-header {
-    background-color: black;
-	padding: 0;
-	margin:0;
-	padding-top: 0;
-	/*position: absolute;*/
-/*width: 1903px;*/
-height: 60px;
-left: 0px;
-top: -3px;
 
-}
-.cart{
-	/*text-align:  center;
-	width: 100%;*/
-	text-align: right;
-	 float: right;
-	   width: 35%;
-	   margin-right: 50px;
-	   margin-bottom: 21px;
-		margin-top: 18px;
-		 font-size: 14pt;
-
-}
-.sort-buttons{
-	display: flex;
-	justify-content: space-evenly;
-	margin-bottom: 30px;
-	margin-top: 20px;
-} 
-
-button.ProductName{
-	height: 40px;
-	width: 195px;
-	
-	/*left: 100px;
-	top: 100px;*/
-}
-
-.container {
-/*display: flex;
-*/
-	display: flex;
-	width: 100%;
-	flex-wrap: wrap;
-	margin: 0 -20px
-}
-
-.gadget{
-	display: flex;
-	flex-direction: column;
-	margin: 0 20px;
-	text-align:  center;
-}
-
-.cost{
-	display: flex;
-	flex-direction: row;
-
-}
-
-
-.money{
-	 text-align: right;
-	 float: right;
-	   width: 55%;
-}
-	
-/*.container img {
-	width: 200px ;
-	height: 300px;
-}*/
-footer {
-	background-color: black;
-	/*width: 1903px;*/
-/*height: 90px;*/
-top: 1617px;
-color: #FF6B3C;
-
-	/* 
-left: 0px;
-top: -3px;
- */
-}
-.shop-name {
-	color: white;
-}
-</style>
-<body  >
+<body>
   		<header  >
   			<div >
-  				<font color="#FFFFFF">G</font><font color="#FFFFFF">A</font><font color="#FFFFFF">D</font><font color="#FFFFFF">G</font><font color="#FF6B3C">E</font><font color="#FF6B3C">T</font>
+  				<!--<font color="#FFFFFF">G</font><font color="#FFFFFF">A</font><font color="#FFFFFF">D</font><font color="#FFFFFF">G</font><font color="#FF6B3C">E</font><font color="#FF6B3C">T</font>-->>
+  				<span class = "white">G</span><span class = "white">A</span><span class = "white">D</span><span class = "white">G</span><span class = "orange">E</span><span class = "orange">T</span>
   				<div class="cart">
-  					<font color="#FF6B3C"; >cart</font>
+  					<font>cart</font>
   				</div>
     		</div>
  		</header>
@@ -137,9 +51,9 @@ top: -3px;
 	<div class="container">
 		    	<div class = "gadget">
 		    		<img src="./images/pr1.jpg" alt="phone" width="150" height="300">
-		    		<span style="margin-bottom:20px; ">Google Pixel 3 XL</span>
+		    		<span class = "model" >Google Pixel 3 XL</span>
 		    		<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left; margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$648</span>
     				</div>
 		    		<!--<form>
@@ -148,82 +62,82 @@ top: -3px;
 		    	</div>	
 		    	<div class = "gadget">
     				<img src="./images/pr2.jpg" alt="phone" width="300" height="300">
-    				<span style="margin-bottom:20px;">Google Pixel 2 XL</span>
+    				<span class = "model"  >Google Pixel 2 XL</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$500</span>
     				</div>
     			</div>
     			<div class = "gadget">
     				<img src="./images/pr3.jpg" alt="phone" width="200" height="300">
-    				<span style="margin-bottom:20px;">Apple iPhone XR</span>
+    				<span class = "model" >Apple iPhone XR</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$714</span>
     				</div>
     			</div>
 
     			<div class = "gadget">
     				<img src="./images/pr4.jpg" alt="phone" width="300" height="300">
-    				<span style="margin-bottom:20px;">OnePlus 7 Pro</span>
+    				<span class = "model" >OnePlus 7 Pro</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$327</span>
     				</div>
     			</div>
     			<div class = "gadget">
     				<img src="./images/pr5.jpg" alt="phone" width="148" height="300">
-    				<span style="margin-bottom:20px;">Samsung Galaxy S10 Plus</span>
+    				<span class = "model">Samsung Galaxy S10 Plus</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$114</span>
     				</div>
     			</div>
     			<div class = "gadget">
     				<img src="./images/pr6.jpg" alt="phone" width="150" height="300">
-    				<span style="margin-bottom:20px;">Samsung Galaxy Note 9</span>
+    				<span class = "model">Samsung Galaxy Note 9</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$170</span>
     				</div>
     			</div>
     			<div class = "gadget">
     				<img src="./images/pr7.jpg" alt="laptop" width="300" height="300">
-    				<span style="margin-bottom:20px;">Dell Alienware 17 R5 VR</span>
+    				<span class = "model">Dell Alienware 17 R5 VR</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$2300</span>
     				</div>
     			</div>
     			<div class = "gadget">
     				<img src="./images/pr8.jpg" alt="laptop" width="300" height="300">
-    				<span style="margin-bottom:20px;">MSI Gaming MSI GT83 8RG-007IN</span>
+    				<span class = "model">MSI Gaming MSI GT83 8RG-007IN</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$5170</span>
     				</div>
     			</div>
     			<div class = "gadget">
     				<img src="./images/pr9.jpg" alt="laptop" width="300" height="300">
-    				<span style="margin-bottom:20px;">CHUWI HeroBook Pro 14.1</span>
+    				<span class = "model">CHUWI HeroBook Pro 14.1</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$439</span>
     				</div>
     			</div>
     			<div class = "gadget">
     				<img src="./images/pr10.jpg" alt="laptop" width="300" height="300">
-    				<span style="margin-bottom:20px;">Apple MacBook Air</span>
+    				<span class = "model">Apple MacBook Air</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$1150</span>
     				</div>
     			</div>
     			<div class = "gadget">
     				<img src="./images/pr11.jpg" alt="laptop" width="300" height="300">
-    				<span style="margin-bottom:20px;">Asus ROG Zephyrus S17 GX701LWS-HG110T</span>
+    				<span class = "model">Asus ROG Zephyrus S17 GX701LWS-HG110T</span>
     				<div class = "cost">
-    					<input type="button" value="Add to Cart" style="float: left;margin-right:25px;">
+    					<input type="button" value="Add to Cart" >
     					<span class="money">$3200</span>
     				</div>
     			</div>
@@ -231,7 +145,7 @@ top: -3px;
 	</div>
 
 	<footer>
-  	  <p color >Contact us </p>
+  	  <p  >Contact us </p>
   	  <p>Leave us with some feedback!!</p> 
   	  <p class="shop-name">© 2020 Gadget-store</p> 
   	  
