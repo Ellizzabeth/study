@@ -16,6 +16,7 @@ function checkboxClick(event){
     let checkboxes = document.querySelectorAll('input[type="checkbox"]');
             checkboxes.forEach((checkbox) => {
             var label = document.getElementById("label_" + checkbox.value);
+            localStorage.setItem(label.innerHTML, checkbox.checked);
             if (checkbox.checked) label.style.setProperty("text-decoration", "line-through");
             else label.style.setProperty("text-decoration", "none");
                  });
@@ -24,13 +25,17 @@ function checkboxClick(event){
 
 
 var CheckBoxID = 0;
-function addTask(taskName){
+function addTask(taskName, checked){
+    localStorage.setItem(taskName, checked);
+
     var div = document.getElementById("list");
     var checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = 'cb' + CheckBoxID;
     checkbox.name = 'cb' + CheckBoxID;
     checkbox.value = 'cb' + CheckBoxID;
+    checkbox.checked = checked;
+
 
     checkbox.addEventListener('click', checkboxClick);
       div.appendChild(checkbox);
@@ -40,6 +45,8 @@ function addTask(taskName){
       label.id = 'label_cb' + CheckBoxID;
       label.for = 'cb' + CheckBoxID;
       label.innerHTML = taskName;
+      if (checked) label.style.setProperty("text-decoration", "line-through");
+      else label.style.setProperty("text-decoration", "none");
       div.appendChild(label);
 
       var br = document.createElement("br");
@@ -47,6 +54,16 @@ function addTask(taskName){
 
       CheckBoxID++;
 
+}
+
+function loadLocalStorage()
+{
+    for (var task in localStorage) {
+        var value = localStorage[task];
+        if (value == "false") addTask(task, false);
+        else if (value == "true") addTask(task, true);
+        //console.log(task + "___" + localStorage[task]);
+    }
 }
 
 function loadPage()
@@ -57,20 +74,16 @@ function loadPage()
   var listElement = div.querySelector(".listclass");
   //if(listElement.hasAttribute("vvalue")) 
   alert(listElement.vvalue);*/
-  
- 
-  for(const task of tasks){
-        
-      addTask(task.text);
-  
-  } 
 
+  //localStorage.clear();
+  loadLocalStorage();
+
+  //for(const task of tasks) addTask(task.text, false);
 }
+
 function onclickCreateTask(){
     var newTask = document.getElementById("newTask");
-    addTask(newTask.value);
-        
-     
+    addTask(newTask.value, false);     
 }
 
 
